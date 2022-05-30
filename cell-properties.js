@@ -125,7 +125,7 @@ underline.addEventListener("click", (e) => {
         let cell=document.querySelector(`.cell[rid="${i}"][cid="${j}"]`);
         let cellProp=sheetDB[i][j];
         cellProp.underline = !cellProp.underline; // Data change
-        cell.style.textDecoration = cellProp.underline ? "underline" : "normal"; //UI change
+        cell.style.textDecoration = cellProp.underline ? "underline" : "none"; //UI change
         underline.style.backgroundColor = cellProp.underline
         ? activeColorprop
         : inactiveColorprop;
@@ -140,7 +140,7 @@ underline.addEventListener("click", (e) => {
 
     // Modification
     cellProp.underline = !cellProp.underline; // Data change
-    cell.style.textDecoration = cellProp.underline ? "underline" : "normal"; //UI change
+    cell.style.textDecoration = cellProp.underline ? "underline" : "none"; //UI change
     underline.style.backgroundColor = cellProp.underline
       ? activeColorprop
       : inactiveColorprop;
