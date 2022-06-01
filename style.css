@@ -65,6 +65,7 @@ body{
     display: flex;
     align-items: center;
     padding-left:0.5rem;
+    overflow:scroll;
 }
 .cellProps-actions-cont>*{
     display: inline-block;
