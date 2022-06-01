@@ -19,8 +19,6 @@ body{
     margin: 0.5rem;
     /* padding:0.5rem; */
     color: #c8d6e5;
-
-
 }
 .formula-actions-cont{
     background-color:#ffffff ;
@@ -33,8 +31,6 @@ body{
 .formula-icon{
     width: 1.3rem;
     /* border-right: 1.2px solid rgb(184, 182, 182); */
-       
-
 }
 .formula-actions-cont>*{
     display: inline-block;
@@ -43,10 +39,7 @@ body{
 .formula-actions-cont>input{
     border:none;
     outline: none;
-    border-right: 1px solid rgb(0, 0, 0);
-    
-    
-    
+    border-right: 1px solid rgb(0, 0, 0);  
 }
 .address-bar{
     width: 5rem;
@@ -73,10 +66,7 @@ body{
 }
 
 .font-family-prop{
-
     padding:0.3rem;
-
-
 }
 
 .font-size-prop{
@@ -122,14 +112,9 @@ body{
     display: flex;
     align-items: center;
     overflow: auto;
-    
-
-  
-    
 }
 .sheet-content{
     width: 5rem;
-   
     /* background-color: #188038; */
 }
 
@@ -164,7 +149,6 @@ body{
     background-color: #c0c0c0;
     position:fixed;
     z-index: 2;
-
 }
 .address-col-cont{
     position: sticky;
@@ -179,7 +163,6 @@ body{
     position: sticky;
     top: 0px;
     left: 2rem;
-
     /* background-color: bisque; */
 }
 
@@ -202,7 +185,6 @@ body{
 }
 
 .address-row{
-
     height: 2rem;
     width: 7rem;
     text-align: center;
@@ -210,7 +192,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .cell{
     height:2rem;
