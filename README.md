@@ -1,9 +1,8 @@
 Hi, This is the Microsoft Excel / Google Sheets Clone with All the Basic Text Editing Features . 
 
-1 ) You Can Perform Text formatting on Single Cells As well as multiple Cells
+1) You Can Perform Text formatting on Single Cells As well as multiple Cells
 
-2 ) For selecting multiple Cells U can Press Ctrl Key And then Select The starting Address And Ending Address
-
+2) For selecting multiple Cells U can Press Ctrl Key And then Select The starting Address And Ending Address
 
 3) You Can also Provide Cell Address in Address Bar . If Your Address is Correct then Address Bar will select that cell . otherwise it will point to the previous correct 
 address.
@@ -17,9 +16,9 @@ Create The Chart .
 
 7) You can delete the created Chart by Right clicking on it . 
 
-9) You can add more sheets by clicking Add Sheets Button In the Bottom Left Corner. 
+8) You can add more sheets by clicking Add Sheets Button In the Bottom Left Corner. 
 
-10 ) If u want to Deselect the cells U can Hold The ctrl Key and press any other location and then release the ctrl key and select any other cell.
+9) If u want to Deselect the cells U can Hold The ctrl Key and press any other location and then release the ctrl key and select any other cell.
 
 // KNOWN ISSUES
 -> Not Responsive ( To make Responsive was not my Primary Goal at all )
