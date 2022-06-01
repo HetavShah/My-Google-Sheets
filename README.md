@@ -20,8 +20,8 @@ Create The Chart .
 
 9) If u want to Deselect the cells U can Hold The ctrl Key and press any other location and then release the ctrl key and select any other cell.
 
+
 // KNOWN ISSUES
--> Not Responsive ( To make Responsive was not my Primary Goal at all )
 
 -> Charts Are Created On the Top of The Screen . So they can be dragged anywhere on the screen
 
