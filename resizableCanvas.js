@@ -1,7 +1,7 @@
 function resizableDiv(param1,param2,param3)
 {
   let stringElement=`${param1}[canid="${param2}"][charid="${param3}"]`
-  console.log(stringElement);
+  // console.log(stringElement);
   const el = document.querySelector(stringElement);
   let isResizing = false;
 

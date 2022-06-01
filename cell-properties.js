@@ -113,7 +113,7 @@ italic.addEventListener("click", (e) => {
 underline.addEventListener("click", (e) => {
   let address = addressBar.value;
   let addressRange=address.split(":");
-  console.log(addressRange);
+  // console.log(addressRange);
   if(addressRange.length===2)
   {
     let [startRow,endRow,startCol,endCol]=getStartEndRowCol();
@@ -152,7 +152,7 @@ fontSize.addEventListener("change", (e) => {
 
   let address = addressBar.value;
   let addressRange=address.split(":");
-  console.log(addressRange);
+  // console.log(addressRange);
   if(addressRange.length===2)
   {
     let [startRow,endRow,startCol,endCol]=getStartEndRowCol();
@@ -183,7 +183,7 @@ fontSize.addEventListener("change", (e) => {
 fontFamily.addEventListener("change", (e) => {
   let address = addressBar.value;
   let addressRange=address.split(":");
-  console.log(addressRange);
+  // console.log(addressRange);
   if(addressRange.length===2)
   {
     let [startRow,endRow,startCol,endCol]=getStartEndRowCol();
@@ -211,7 +211,7 @@ fontFamily.addEventListener("change", (e) => {
 fontColor.addEventListener("change", (e) => {
   let address = addressBar.value;
   let addressRange=address.split(":");
-  console.log(addressRange);
+  // console.log(addressRange);
   if(addressRange.length===2)
   {
     let [startRow,endRow,startCol,endCol]=getStartEndRowCol();
@@ -243,7 +243,7 @@ fontColor.addEventListener("change", (e) => {
 BGColor.addEventListener("change", (e) => {
   let address = addressBar.value;
   let addressRange=address.split(":");
-  console.log(addressRange);
+  // console.log(addressRange);
   if(addressRange.length===2)
   {
     let [startRow,endRow,startCol,endCol]=getStartEndRowCol();
@@ -425,10 +425,10 @@ addressBar.addEventListener("keydown",(e)=>{
         for(let i=0;i<decodedAddress.length;i++)
         {
           let [rid,cid]=decodeRIDCIDFromAddress(decodedAddress[i]);
-          console.log(rid,cid);
+          // console.log(rid,cid);
           rangeStorage.push([rid,cid]);
         }
-        console.log(rangeStorage);
+        // console.log(rangeStorage);
         SelectedCellsUI();
       }
       else{
@@ -438,7 +438,7 @@ addressBar.addEventListener("keydown",(e)=>{
 
     }
     else{
-      console.log(PreviousAddress);
+      // console.log(PreviousAddress);
       addressBar.value=PreviousAddress;
     }
   }

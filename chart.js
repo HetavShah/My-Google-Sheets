@@ -55,7 +55,7 @@ chartBtn.addEventListener("click",(e)=>{
 
 
       chartDB.push(newChart);
-      console.log(newChart);
+      // console.log(newChart);
 
       // UI Change
    let newCanvas= createChartUI(newChart);

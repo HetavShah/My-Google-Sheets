@@ -46,12 +46,12 @@ for(let i=0;i<rows;i++)
 function evaluateExpression(formula)
 {
     let encodedFormula=formula.split(" ");
-console.log(formula);
+// console.log(formula);
     for(let i=0;i<encodedFormula.length;i++)
     {
         if(isValidAddress(encodedFormula[i]))
         {
-            console.log(encodedFormula[i]);
+            // console.log(encodedFormula[i]);
             let [rid,cid]= decodeRIDCIDFromAddress(encodedFormula[i]);
             let cellProp=sheetDB[rid][cid];
             encodedFormula[i]=cellProp.value;
@@ -238,12 +238,12 @@ function sumFunction(arrExp)
 
 function subFunction()
 {
-    console.log("This is sub Function");
+    // console.log("This is sub Function");
 }
 
 function mulFunction()
 {
-    console.log("This is mul Function");
+    // console.log("This is mul Function");
 }
 
 function pushingCustomAddressRangeinStorage(arr,range)

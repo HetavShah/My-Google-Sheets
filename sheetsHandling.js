@@ -47,7 +47,7 @@ function handleSheetRemoval(sheet)
       let removedsheetIdx=Number(sheet.getAttribute("id"));
       collectedSheetDB.splice(removedsheetIdx,1);
       collectedChartDB.splice(removedsheetIdx,1);
-      console.log(collectedChartDB);  
+      // console.log(collectedChartDB);  
       removeSheetChart(removedsheetIdx);
       resetCanvasId();
       handleSheetUIRemoval(sheet);
@@ -138,7 +138,7 @@ function handleSheetActiveness(sheet)
       hideSheetChart(canvasIdx);
       sheetIdx=Number(sheet.getAttribute("id"));
       canvasIdx=sheetIdx;
-      console.log(canvasIdx);
+      // console.log(canvasIdx);
      handleSheetDB(sheetIdx);
      handleChartDB(sheetIdx);
      handleSheetProperties();
