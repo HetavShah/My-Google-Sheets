@@ -1,4 +1,4 @@
-Hi, This is the Microsoft Excel / Google Sheets Clone with All the Basic Text Editing Features . 
+Hi, This is  Microsoft Excel / Google Sheets Clone with All the Basic Text Editing Features . 
 
 1) You Can Perform Text formatting on Single Cells As well as multiple Cells
 
