@@ -22,18 +22,25 @@ Create The Chart .
 
 // KNOWN ISSUES
 -> Not Responsive ( To make Responsive was not my Primary Goal at all )
+
 -> Charts Are Created On the Top of The Screen . So they can be dragged anywhere on the screen
+
 -> Creating more then one charts and Deleting The Previous chart is creating an issue with other charts ( Not sure why it is happening but i am looking into it )
+
 -> Downloading a sheet only downloads the sheets and not charts ( because that's how I coded that logic )
--> You can't copy paste a single Cell . U need to press Twice on the cell  ( That's because the code is getting only starting address if u click the cell one time so in
-order to provide ending address you need to click once more .
+
+-> You can't copy paste a single Cell . U need to press Twice on the cell  ( That's because the code is getting only starting address if u click the cell one time so in order to provide ending address you need to click once more .
 
 
 // FUTURE PLANS 
 
 -> Fixing Known Issues
+
 -> Providing Graph Functionality with Desmos API.
+
 -> Providing Recursive Support in Built-in Formulas
+
 -> adding More type of Charts with More features
+
 -> Providing Dynamic Updation of Charts
 
