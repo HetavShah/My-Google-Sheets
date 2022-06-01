@@ -23,6 +23,8 @@ Create The Chart .
 
 // KNOWN ISSUES
 
+-> Not Fully Responsive . ( It would be a great help if anyone want to contribute to its responsiveness)
+
 -> Charts Are Created On the Top of The Screen . So they can be dragged anywhere on the screen
 
 -> Creating more then one charts and Deleting The Previous chart is creating an issue with other charts ( Not sure why it is happening but i am looking into it )
