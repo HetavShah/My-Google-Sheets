@@ -106,6 +106,7 @@ function AddChildToParent(formula)
             {
                 let [cell,ParentCellProp]=activecell(encodedFormula[i]);
                      ParentCellProp.child.push(childAddress);
+                    //  console.log(ParentCellProp);
             }
             
         }
@@ -349,7 +350,7 @@ function interpolateFunction(arrExp){
                 }
             }
            stringExpr= stringExpr.join(" - ");
-           console.log(stringExpr);
+        //    console.log(stringExpr);
         arrExp[i]=stringExpr;
             // console.log(startRow,endRow,startCol,endCol);
         }
@@ -361,12 +362,12 @@ function interpolateFunction(arrExp){
     xrange=xrange.map(Number);
     yrange=yrange.map(Number);
     valueTobeFind=[valueTobeFind].map(Number);
-    let ans;
+    let ans="Out Of Range";
     for (let i=0;i<xrange.length;i++)
     {
-        if(valueTobeFind>xrange[i])
+        if(xrange[i]>=valueTobeFind)
         {
-                ans=yrange[i] + (valueTobeFind-xrange[i])*(yrange[i+1]-yrange[i])/(xrange[i+1]-xrange[i]);
+                ans=yrange[i-1] + (valueTobeFind-xrange[i-1])*(yrange[i]-yrange[i-1])/(xrange[i]-xrange[i-1]);
                 return ans;
 
         }
