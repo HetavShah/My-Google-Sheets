@@ -1,5 +1,5 @@
 
-let availableFunctions=["SUM","SUB","MUL"]
+let availableFunctions=["SUM","SUB","MUL","INTERPOLATE"]
 let arrExp=[];
 
 for(let i=0;i<rows;i++)
@@ -167,6 +167,7 @@ function evaluateFormula(expression)
         expression=expression.split(" ").slice(2).join(" ");
         expression=expression.slice(1,expression.length-1);
          arrExp=expression.split(",");
+        //  console.log(arrExp);
        let ans= HandleInbuiltFunction(idx,arrExp);
        return ans;
         }
@@ -196,6 +197,11 @@ function HandleInbuiltFunction(idx,arrExp)
         case 2:
             value=mulFunction(arrExp);
             break;
+        case 3:
+            value=interpolateFunction(arrExp);
+            break;
+
+
         default:
             
     }
@@ -236,14 +242,140 @@ function sumFunction(arrExp)
     return (evaluateExpression(arrExp[0]) + evaluateExpression (arrExp[1]));
 }
 
-function subFunction()
+function subFunction(arrExp)
 {
-    // console.log("This is sub Function");
+    let checkAddress=[];
+   checkAddress.push(arrExp[0].replace(" ",""));
+   checkAddress.push(arrExp[1].replace(" ",""));
+   for(let i=0;i<checkAddress.length;i++)
+   {
+       if(isValidAddress(checkAddress[i]))
+       {
+           let arr=[];
+           pushingCustomAddressRangeinStorage(arr,checkAddress[i]);
+           let [startRow,endRow,startCol,endCol]=getStartEndRowCol(arr)
+           let stringExpr=[];
+           for(let i=startRow;i<=endRow;i++)
+           {
+               for(let j=startCol;j<=endCol;j++)
+               {
+                   let cellAddress = `${String.fromCharCode(j + 65)}${i + 1}`;
+                   // console.log(cellAddress);
+                   stringExpr.push(cellAddress);
+               }
+           }
+          stringExpr= stringExpr.join(" - ");
+          console.log(stringExpr);
+       arrExp[i]=stringExpr;
+           // console.log(startRow,endRow,startCol,endCol);
+       }
+   }
+    // console.log(expr1);
+    return (evaluateExpression(arrExp[0]) - evaluateExpression (arrExp[1]));
 }
 
-function mulFunction()
+function mulFunction(arrExp)
 {
-    // console.log("This is mul Function");
+    let checkAddress=[];
+    checkAddress.push(arrExp[0].replace(" ",""));
+    checkAddress.push(arrExp[1].replace(" ",""));
+    for(let i=0;i<checkAddress.length;i++)
+    {
+        if(isValidAddress(checkAddress[i]))
+        {
+            let arr=[];
+            pushingCustomAddressRangeinStorage(arr,checkAddress[i]);
+            let [startRow,endRow,startCol,endCol]=getStartEndRowCol(arr)
+            let stringExpr=[];
+            for(let i=startRow;i<=endRow;i++)
+            {
+                for(let j=startCol;j<=endCol;j++)
+                {
+                    let cellAddress = `${String.fromCharCode(j + 65)}${i + 1}`;
+                    // console.log(cellAddress);
+                    stringExpr.push(cellAddress);
+                }
+            }
+           stringExpr= stringExpr.join(" * ");
+           console.log(stringExpr);
+        arrExp[i]=stringExpr;
+            // console.log(startRow,endRow,startCol,endCol);
+        }
+    }
+     // console.log(expr1);
+     return (evaluateExpression(arrExp[0]) * evaluateExpression (arrExp[1]));
+}
+
+function interpolateFunction(arrExp){
+    let valueTobeFind=arrExp[0];
+    let xrange;
+    let yrange;
+    let valAddress=arrExp[0].replace(" ","");
+    let xaddress=arrExp[1].replace(" ","");
+    let yaddress=arrExp[2].replace(" ","");
+    let checkAddress=[];
+    checkAddress.push(valAddress);
+    checkAddress.push(xaddress);
+    checkAddress.push(yaddress);
+   
+   if(isValidAddress(valAddress))
+   { 
+       [valueTobeFind]=getCellDataFromRange(valAddress);
+    }
+    if(isValidAddress(xaddress))
+    {
+        xrange=getCellDataFromRange(xaddress);
+    }
+    if(isValidAddress(yaddress))
+    {
+        yrange=getCellDataFromRange(yaddress);
+    }
+
+    for(let i=0;i<checkAddress.length;i++)
+    {
+        if(isValidAddress(checkAddress[i]))
+        {
+            let arr=[];
+            pushingCustomAddressRangeinStorage(arr,checkAddress[i]);
+            let [startRow,endRow,startCol,endCol]=getStartEndRowCol(arr)
+            let stringExpr=[];
+            for(let i=startRow;i<=endRow;i++)
+            {
+                for(let j=startCol;j<=endCol;j++)
+                {
+                    let cellAddress = `${String.fromCharCode(j + 65)}${i + 1}`;
+                    // console.log(cellAddress);
+                    stringExpr.push(cellAddress);
+                }
+            }
+           stringExpr= stringExpr.join(" - ");
+           console.log(stringExpr);
+        arrExp[i]=stringExpr;
+            // console.log(startRow,endRow,startCol,endCol);
+        }
+    }
+
+
+    // console.log(valueTobeFind,xrange,yrange);
+
+    xrange=xrange.map(Number);
+    yrange=yrange.map(Number);
+    valueTobeFind=[valueTobeFind].map(Number);
+    let ans;
+    for (let i=0;i<xrange.length;i++)
+    {
+        if(valueTobeFind>xrange[i])
+        {
+                ans=yrange[i] + (valueTobeFind-xrange[i])*(yrange[i+1]-yrange[i])/(xrange[i+1]-xrange[i]);
+                return ans;
+
+        }
+
+    }
+
+    return ans;
+
+    // console.log("This is Interpolate Function");
 }
 
 function pushingCustomAddressRangeinStorage(arr,range)
