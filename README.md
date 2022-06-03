@@ -9,7 +9,7 @@ address.
 
 4) You can Perform Basic Arithmatic Operations in the Formula Bar . All operators and Operands must be space seperated ( i.e A1 + A2 - 2 * A3 + A4 )
 
-5) There is Only One in built Formula Implemented  as of now which is : = SUM ( Exp1 , Exp2 ) . U can Provide Cell Address , Cell Range or any Arithmatic Expression in Exp1 or Exp2
+5) Available Built-in  Formulas : = SUM ( Exp1 , Ex2 ) , = SUB ( Exp1 , Exp2 ) , = MUL ( Exp1 , Exp 2) , = INTERPOLATE ( Value , CellRange1 , CellRange2 ) 
 
 6) You can add Chart by Clicking on Chart Button. There are Only 2 Charts Available which are bar and line  (Case Sensitive) . Any other option or Wrong Input will Not
 Create The Chart .
