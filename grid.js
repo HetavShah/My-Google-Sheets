@@ -2,9 +2,9 @@ let rows=100;
 let columns=26;
 
 
-let addressColCont=document.querySelector(".address-col-cont");
+let addressColCont=document.querySelector(".address-col-cont"); 
 
-for(let i=0;i<rows;i++)
+for(let i=0;i<rows;i++)                             // added 1-100 column numbers in addColCont
 {
     let addressCol=document.createElement("div");
     addressCol.setAttribute("class","address-col")
@@ -13,7 +13,7 @@ for(let i=0;i<rows;i++)
 }
 let addressRowCont=document.querySelector(".address-row-cont");
 
-for(let i=0;i<columns;i++)
+for(let i=0;i<columns;i++)                              // added A-Z coluumn names  in addRowCont
 {
     let addressRow=document.createElement("div");
     addressRow.setAttribute("class","address-row");
@@ -23,15 +23,15 @@ for(let i=0;i<columns;i++)
 
 }
 
-let cellsCont=document.querySelector(".cells-cont"); 
+let cellsCont=document.querySelector(".cells-cont");       
 
-for(let i=0;i<rows;i++)
+for(let i=0;i<rows;i++)                             
 {
-    let rowCont=document.createElement("div");
+    let rowCont=document.createElement("div");          // Row Container is created 
     rowCont.setAttribute("class","row-cont");
     for(let j=0;j<columns;j++)
     {
-        let cell=document.createElement("div");
+        let cell=document.createElement("div");         // in each Row Container the cell is appended for number of columns time
         cell.setAttribute("class","cell");
         cell.setAttribute("spellcheck","false");
         // Attributes for Cell Storage Identification
@@ -41,12 +41,14 @@ for(let i=0;i<rows;i++)
         rowCont.appendChild(cell);
         addListnerForAddressBarDisplay(cell,i,j);
     }
-    cellsCont.appendChild(rowCont);
+    cellsCont.appendChild(rowCont);                 // Row container is appended into Cell Container
 }
-let addressBar=document.querySelector(".address-bar")
-function addListnerForAddressBarDisplay(cell,i,j)
+let addressBar=document.querySelector(".address-bar")       // AddressBar is selected
+
+
+function addListnerForAddressBarDisplay(cell,i,j)        // Function Created to Add click event listner on given cell so that addressbar can display Address
 {
-   cell.addEventListener("click",(e)=>{
+   cell.addEventListener("click",(e)=>{                             
        let rowID=i+1;
        let ColumnID=String.fromCharCode(65+j);
        addressBar.value=`${ColumnID}${rowID}`;
